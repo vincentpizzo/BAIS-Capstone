@@ -1,0 +1,37 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="./css/Style.css" />
+</head>
+<body>
+    <h1>BAIS Placement</h1>
+    <ul>
+        <li><a href="Default.aspx">Home</a></li>
+        <li><a href="AddJob.aspx">Add Job</a></li>
+        <li><a href="About.aspx">About Us</a></li>
+        <li><a href="LogIn.aspx">Log In</a></li>
+    </ul>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    <div id="footer">
+        <h4>Copyright 2015</h4>
+        <ul>
+            <li><a href="www.facebook.com">Facebook</a></li>
+            <li><a href="www.twitter.com">Twitter</a></li>
+            <li><a href="www.linkedin.com">LinkedIn</a></li>
+        </ul>
+    </div>
+</body>
+</html>
