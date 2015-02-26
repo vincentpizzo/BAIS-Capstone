@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
 
-            <asp:HyperLink ID="link_userManager" runat="server" NavigateUrl="~/site_mgr/UserMgmt.aspx">User Manager</asp:HyperLink>
+            <asp:HyperLink ID="link_userManager" runat="server" NavigateUrl="~/site_mgr/LogIn.aspx">User Manager</asp:HyperLink>
 
             <br /><br /><hr />
             
