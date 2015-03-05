@@ -15,7 +15,7 @@
         <li><a href="Default.aspx">Home</a></li>
         <li><a href="AddJob.aspx">Add Job</a></li>
         <li><a href="About.aspx">About Us</a></li>
-        <li><a href="site_mgr/LogIn.aspx">Admin</a></li>
+        <li><a href="Admin/default.aspx">Admin</a></li>
         <li><a href="Login.aspx">Login</a></li>
     </ul>
     <form id="form1" runat="server">
