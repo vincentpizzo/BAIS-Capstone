@@ -6,5 +6,9 @@
 
     <asp:Login ID="Login1" runat="server"></asp:Login>
 
+    <asp:Label ID="Label1" runat="server" Text="Label">Username: admin Password: pAssw0rd!  (0 is a zero)</asp:Label>
+
+
+
 </asp:Content>
 
