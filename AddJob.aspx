@@ -14,128 +14,120 @@
 
     <div>
 
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbo.PlacementDB2 %>" DeleteCommand="DELETE FROM [PlacementDB2] WHERE [GuitarID] = @GuitarID" InsertCommand="INSERT INTO [vpizzo_HW7] ([GuitarModel], [GuitarBrand], [YearIntroduced], [Price], [UsedBy], [BodyMaterial], [NeckMaterial], [Pickups], [BodyStyle]) VALUES (@GuitarModel, @GuitarBrand, @YearIntroduced, @Price, @UsedBy, @BodyMaterial, @NeckMaterial, @Pickups, @BodyStyle)" SelectCommand="SELECT * FROM [vpizzo_HW7]" UpdateCommand="UPDATE [vpizzo_HW7] SET [GuitarModel] = @GuitarModel, [GuitarBrand] = @GuitarBrand, [YearIntroduced] = @YearIntroduced, [Price] = @Price, [UsedBy] = @UsedBy, [BodyMaterial] = @BodyMaterial, [NeckMaterial] = @NeckMaterial, [Pickups] = @Pickups, [BodyStyle] = @BodyStyle WHERE [GuitarID] = @GuitarID">
-                    <DeleteParameters>
-                        <asp:Parameter Name="GuitarID" Type="Int32" />
-                    </DeleteParameters>
-                    <InsertParameters>
-                        <asp:Parameter Name="GuitarModel" Type="String" />
-                        <asp:Parameter Name="GuitarBrand" Type="String" />
-                        <asp:Parameter Name="YearIntroduced" Type="Int32" />
-                        <asp:Parameter Name="Price" Type="Int32" />
-                        <asp:Parameter Name="UsedBy" Type="String" />
-                        <asp:Parameter Name="BodyMaterial" Type="String" />
-                        <asp:Parameter Name="NeckMaterial" Type="String" />
-                        <asp:Parameter Name="Pickups" Type="String" />
-                        <asp:Parameter Name="BodyStyle" Type="String" />
-                    </InsertParameters>
-                    <UpdateParameters>
-                        <asp:Parameter Name="GuitarModel" Type="String" />
-                        <asp:Parameter Name="GuitarBrand" Type="String" />
-                        <asp:Parameter Name="YearIntroduced" Type="Int32" />
-                        <asp:Parameter Name="Price" Type="Int32" />
-                        <asp:Parameter Name="UsedBy" Type="String" />
-                        <asp:Parameter Name="BodyMaterial" Type="String" />
-                        <asp:Parameter Name="NeckMaterial" Type="String" />
-                        <asp:Parameter Name="Pickups" Type="String" />
-                        <asp:Parameter Name="BodyStyle" Type="String" />
-                        <asp:Parameter Name="GuitarID" Type="Int32" />
-                    </UpdateParameters>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbo.StudentPlacement %>" SelectCommand="SELECT * FROM [StudentPlacement]">
                 </asp:SqlDataSource>
                 <br />
                 <br />
-                <asp:FormView ID="FormView2" runat="server" DataKeyNames="GuitarID" DataSourceID="SqlDataSource1" DefaultMode="Insert" BackColor="#86C1ED" BorderColor="#0066FF">
+                <asp:FormView ID="FormView2" runat="server" DataKeyNames="PlacementID" DataSourceID="SqlDataSource1" DefaultMode="Insert" BackColor="White" BorderColor="#0066FF">
                     <EditItemTemplate>
+                        
+                        PlacementID:
+                        <asp:Label ID="PlacementIDLabel1" runat="server" Text='<%# Eval("PlacementID") %>' />
+                        <br />
+                        PositionID:
+                        <asp:TextBox ID="PositionIDTextBox" runat="server" Text='<%# Bind("PositionID") %>' />
+                        <br />
+                        StudentID:
+                        <asp:TextBox ID="StudentIDTextBox" runat="server" Text='<%# Bind("StudentID") %>' />
+                        <br />
+                        CompanyID:
+                        <asp:TextBox ID="CompanyIDTextBox" runat="server" Text='<%# Bind("CompanyID") %>' />
+                        <br />
+                        PositionTitleID:
+                        <asp:TextBox ID="PositionTitleIDTextBox" runat="server" Text='<%# Bind("PositionTitleID") %>' />
+                        <br />
+                        SemesterID:
+                        <asp:TextBox ID="SemesterIDTextBox" runat="server" Text='<%# Bind("SemesterID") %>' />
+                        <br />
+                        MajorID:
+                        <asp:TextBox ID="MajorIDTextBox" runat="server" Text='<%# Bind("MajorID") %>' />
+                        <br />
+                        Internship/FullTime:
+                        <asp:TextBox ID="Internship_FullTimeTextBox" runat="server" Text='<%# Bind("[Internship/FullTime]") %>' />
+                        <br />
+                        Paid[Y/N]:
+                        <asp:TextBox ID="Paid_Y_N_TextBox" runat="server" Text='<%# Bind("[Paid[Y/N]]") %>' />
+                        <br />
+                        StartDate:
+                        <asp:TextBox ID="StartDateTextBox" runat="server" Text='<%# Bind("StartDate") %>' />
+                        <br />
+                        EndDate:
+                        <asp:TextBox ID="EndDateTextBox" runat="server" Text='<%# Bind("EndDate") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                         
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        <table>
-                            <tr>
-                                <td style="text-align: right;">
-                                    Model:
-                                </td>
-                                <td style="text-align: left;">
-                                    <asp:TextBox ID="tb_GuitarModel" runat="server" Text='<%# Bind("GuitarModel") %>' />
-                                </td>
-                                <td style="text-align: left;">
-                                    <asp:RequiredFieldValidator ID="rfv_Model" runat="server" ErrorMessage="Please enter the name of the new guitar model" CssClass="validationError" ControlToValidate="tb_GuitarModel"></asp:RequiredFieldValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right;">
-                                    Brand:
-                                </td>
-                                <td style="text-align: left;">
-                                    <asp:TextBox ID="tb_GuitarBrand" runat="server" Text='<%# Bind("GuitarBrand") %>' />
-                                </td>
-                                  <td style="text-align: left;">
-                                    <asp:RequiredFieldValidator ID="rfv_Brand" runat="server" ErrorMessage="Please enter the brand of the new guitar model" CssClass="validationError" ControlToValidate="tb_GuitarBrand"></asp:RequiredFieldValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right;">
-                                    Year Introduced:
-                                </td>
-                                <td style="text-align: left;">
-                                    <asp:TextBox ID="tb_YearIntroduced" runat="server" Text='<%# Bind("YearIntroduced") %>' />
-                                </td>
-                                  <td style="text-align: left;">
-                                    <asp:RequiredFieldValidator ID="rfv_Year" runat="server" ErrorMessage="Please enter the year that the new guitar was introduced" CssClass="validationError" ControlToValidate="tb_YearIntroduced"></asp:RequiredFieldValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right;">
-                                    Price:
-                                </td>
-                                <td style="text-align: left;">
-                                    <asp:TextBox ID="tb_Price" runat="server" Text='<%# Bind("Price") %>' />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right;">
-                                    Used By:
-                                </td>
-                                <td style="text-align: left;">
-                                    <asp:TextBox ID="tb_UsedBy" runat="server" Text='<%# Bind("UsedBy") %>' />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right;">
-                                    Body Material:
-                                </td>
-                                <td style="text-align: left;">
-                                    <asp:TextBox ID="tb_BodyMaterial" runat="server" Text='<%# Bind("BodyMaterial") %>' />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right;">
-                                    Neck Material:
-                                </td>
-                                <td style="text-align: left;">
-                                    <asp:TextBox ID="tb_NeckMaterial" runat="server" Text='<%# Bind("NeckMaterial") %>' />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: right;">
-                                    Body Style:
-                                </td>
-                                <td style="text-align: left;">
-                                    <asp:TextBox ID="tb_BodyStyle" runat="server" Text='<%# Bind("BodyStyle") %>' />
-                                </td>
-                            </tr>
-                        </table>
-                            <tr>
-                                <td style="text-align: right;">
-                                    <asp:Button ID="btn_Insert" runat="server" CausesValidation="true" CommandName="Insert" Text="Insert" />
-                                </td>
-                                <td style="text-align: left;">
-                                    <asp:Button ID="btn_cancelInsert" runat="server" CausesValidation="false" CommandName="Cancel" Text="Cancel" />
-                                </td>
-
-                            </tr>
+                        PositionID:
+                        <asp:TextBox ID="PositionIDTextBox" runat="server" Text='<%# Bind("PositionID") %>' />
+                        <br />
+                        StudentID:
+                        <asp:TextBox ID="StudentIDTextBox" runat="server" Text='<%# Bind("StudentID") %>' />
+                        <br />
+                        CompanyID:
+                        <asp:TextBox ID="CompanyIDTextBox" runat="server" Text='<%# Bind("CompanyID") %>' />
+                        <br />
+                        PositionTitleID:
+                        <asp:TextBox ID="PositionTitleIDTextBox" runat="server" Text='<%# Bind("PositionTitleID") %>' />
+                        <br />
+                        SemesterID:
+                        <asp:TextBox ID="SemesterIDTextBox" runat="server" Text='<%# Bind("SemesterID") %>' />
+                        <br />
+                        MajorID:
+                        <asp:TextBox ID="MajorIDTextBox" runat="server" Text='<%# Bind("MajorID") %>' />
+                        <br />
+                        Internship/FullTime:
+                        <asp:TextBox ID="Internship_FullTimeTextBox" runat="server" Text='<%# Bind("[Internship/FullTime]") %>' />
+                        <br />
+                        Paid[Y/N]:
+                        <asp:TextBox ID="Paid_Y_N_TextBox" runat="server" Text='<%# Bind("[Paid[Y/N]]") %>' />
+                        <br />
+                        StartDate:
+                        <asp:TextBox ID="StartDateTextBox" runat="server" Text='<%# Bind("StartDate") %>' />
+                        <br />
+                        EndDate:
+                        <asp:TextBox ID="EndDateTextBox" runat="server" Text='<%# Bind("EndDate") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
 
                     </InsertItemTemplate>
                     <ItemTemplate>
+                       
+                        PlacementID:
+                        <asp:Label ID="PlacementIDLabel" runat="server" Text='<%# Eval("PlacementID") %>' />
+                        <br />
+                        PositionID:
+                        <asp:Label ID="PositionIDLabel" runat="server" Text='<%# Bind("PositionID") %>' />
+                        <br />
+                        StudentID:
+                        <asp:Label ID="StudentIDLabel" runat="server" Text='<%# Bind("StudentID") %>' />
+                        <br />
+                        CompanyID:
+                        <asp:Label ID="CompanyIDLabel" runat="server" Text='<%# Bind("CompanyID") %>' />
+                        <br />
+                        PositionTitleID:
+                        <asp:Label ID="PositionTitleIDLabel" runat="server" Text='<%# Bind("PositionTitleID") %>' />
+                        <br />
+                        SemesterID:
+                        <asp:Label ID="SemesterIDLabel" runat="server" Text='<%# Bind("SemesterID") %>' />
+                        <br />
+                        MajorID:
+                        <asp:Label ID="MajorIDLabel" runat="server" Text='<%# Bind("MajorID") %>' />
+                        <br />
+                        Internship/FullTime:
+                        <asp:Label ID="Internship_FullTimeLabel" runat="server" Text='<%# Bind("[Internship/FullTime]") %>' />
+                        <br />
+                        Paid[Y/N]:
+                        <asp:Label ID="Paid_Y_N_Label" runat="server" Text='<%# Bind("[Paid[Y/N]]") %>' />
+                        <br />
+                        StartDate:
+                        <asp:Label ID="StartDateLabel" runat="server" Text='<%# Bind("StartDate") %>' />
+                        <br />
+                        EndDate:
+                        <asp:Label ID="EndDateLabel" runat="server" Text='<%# Bind("EndDate") %>' />
+                        <br />
                        
                     </ItemTemplate>
                 </asp:FormView>
