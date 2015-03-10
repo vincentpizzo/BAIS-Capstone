@@ -1,4 +1,2 @@
-﻿
-Partial Class AddJob
-    Inherits System.Web.UI.Pages
+﻿Partial Class AddJob
 End Class
