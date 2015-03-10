@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="AddJob.aspx.vb" Inherits="admin_" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="AddJob.aspx.vb" Inherits="AddJob" %>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -14,80 +14,39 @@
 
     <div>
 
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbo.StudentPlacement %>" SelectCommand="SELECT * FROM [StudentPlacement]">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbo.StudentPlacement %>" SelectCommand="SELECT * FROM [Position_Posting]">
                 </asp:SqlDataSource>
                 <br />
                 <br />
-                <asp:FormView ID="FormView2" runat="server" DataKeyNames="PlacementID" DataSourceID="SqlDataSource1" DefaultMode="Insert" BackColor="White" BorderColor="#0066FF">
+                <asp:FormView ID="FormView2" runat="server" DataSourceID="SqlDataSource1" DefaultMode="Insert" BackColor="White" BorderColor="#0066FF">
                     <EditItemTemplate>
-                        
-                        PlacementID:
-                        <asp:Label ID="PlacementIDLabel1" runat="server" Text='<%# Eval("PlacementID") %>' />
-                        <br />
-                        PositionID:
-                        <asp:TextBox ID="PositionIDTextBox" runat="server" Text='<%# Bind("PositionID") %>' />
-                        <br />
-                        StudentID:
-                        <asp:TextBox ID="StudentIDTextBox" runat="server" Text='<%# Bind("StudentID") %>' />
-                        <br />
-                        CompanyID:
-                        <asp:TextBox ID="CompanyIDTextBox" runat="server" Text='<%# Bind("CompanyID") %>' />
-                        <br />
-                        PositionTitleID:
-                        <asp:TextBox ID="PositionTitleIDTextBox" runat="server" Text='<%# Bind("PositionTitleID") %>' />
-                        <br />
-                        SemesterID:
-                        <asp:TextBox ID="SemesterIDTextBox" runat="server" Text='<%# Bind("SemesterID") %>' />
-                        <br />
-                        MajorID:
-                        <asp:TextBox ID="MajorIDTextBox" runat="server" Text='<%# Bind("MajorID") %>' />
-                        <br />
-                        Internship/FullTime:
-                        <asp:TextBox ID="Internship_FullTimeTextBox" runat="server" Text='<%# Bind("[Internship/FullTime]") %>' />
-                        <br />
-                        Paid[Y/N]:
-                        <asp:TextBox ID="Paid_Y_N_TextBox" runat="server" Text='<%# Bind("[Paid[Y/N]]") %>' />
-                        <br />
-                        StartDate:
-                        <asp:TextBox ID="StartDateTextBox" runat="server" Text='<%# Bind("StartDate") %>' />
-                        <br />
-                        EndDate:
-                        <asp:TextBox ID="EndDateTextBox" runat="server" Text='<%# Bind("EndDate") %>' />
-                        <br />
-                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
-                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+
                         
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        PositionID:
-                        <asp:TextBox ID="PositionIDTextBox" runat="server" Text='<%# Bind("PositionID") %>' />
+                        HawkID:
+                        <asp:TextBox ID="HawkIDTextBox" runat="server" Text='<%# Bind("HawkID") %>' />
                         <br />
-                        StudentID:
-                        <asp:TextBox ID="StudentIDTextBox" runat="server" Text='<%# Bind("StudentID") %>' />
+                        SemesterName:
+                        <asp:TextBox ID="SemesterNameTextBox" runat="server" Text='<%# Bind("SemesterName") %>' />
                         <br />
-                        CompanyID:
-                        <asp:TextBox ID="CompanyIDTextBox" runat="server" Text='<%# Bind("CompanyID") %>' />
+                        MajorName:
+                        <asp:TextBox ID="MajorNameTextBox" runat="server" Text='<%# Bind("MajorName") %>' />
                         <br />
-                        PositionTitleID:
-                        <asp:TextBox ID="PositionTitleIDTextBox" runat="server" Text='<%# Bind("PositionTitleID") %>' />
+                        CompanyName:
+                        <asp:TextBox ID="CompanyNameTextBox" runat="server" Text='<%# Bind("CompanyName") %>' />
                         <br />
-                        SemesterID:
-                        <asp:TextBox ID="SemesterIDTextBox" runat="server" Text='<%# Bind("SemesterID") %>' />
+                        CompanyCity:
+                        <asp:TextBox ID="CompanyCityTextBox" runat="server" Text='<%# Bind("CompanyCity") %>' />
                         <br />
-                        MajorID:
-                        <asp:TextBox ID="MajorIDTextBox" runat="server" Text='<%# Bind("MajorID") %>' />
+                        CompanyState:
+                        <asp:TextBox ID="CompanyStateTextBox" runat="server" Text='<%# Bind("CompanyState") %>' />
                         <br />
-                        Internship/FullTime:
-                        <asp:TextBox ID="Internship_FullTimeTextBox" runat="server" Text='<%# Bind("[Internship/FullTime]") %>' />
+                        PositionTitle:
+                        <asp:TextBox ID="PositionTitleTextBox" runat="server" Text='<%# Bind("PositionTitle") %>' />
                         <br />
-                        Paid[Y/N]:
-                        <asp:TextBox ID="Paid_Y_N_TextBox" runat="server" Text='<%# Bind("[Paid[Y/N]]") %>' />
-                        <br />
-                        StartDate:
-                        <asp:TextBox ID="StartDateTextBox" runat="server" Text='<%# Bind("StartDate") %>' />
-                        <br />
-                        EndDate:
-                        <asp:TextBox ID="EndDateTextBox" runat="server" Text='<%# Bind("EndDate") %>' />
+                        PositionDesc:
+                        <asp:TextBox ID="PositionDescTextBox" runat="server" Text='<%# Bind("PositionDesc") %>' />
                         <br />
                         <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
                         &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
@@ -95,38 +54,29 @@
                     </InsertItemTemplate>
                     <ItemTemplate>
                        
-                        PlacementID:
-                        <asp:Label ID="PlacementIDLabel" runat="server" Text='<%# Eval("PlacementID") %>' />
+                        HawkID:
+                        <asp:Label ID="HawkIDLabel" runat="server" Text='<%# Bind("HawkID") %>' />
                         <br />
-                        PositionID:
-                        <asp:Label ID="PositionIDLabel" runat="server" Text='<%# Bind("PositionID") %>' />
+                        SemesterName:
+                        <asp:Label ID="SemesterNameLabel" runat="server" Text='<%# Bind("SemesterName") %>' />
                         <br />
-                        StudentID:
-                        <asp:Label ID="StudentIDLabel" runat="server" Text='<%# Bind("StudentID") %>' />
+                        MajorName:
+                        <asp:Label ID="MajorNameLabel" runat="server" Text='<%# Bind("MajorName") %>' />
                         <br />
-                        CompanyID:
-                        <asp:Label ID="CompanyIDLabel" runat="server" Text='<%# Bind("CompanyID") %>' />
+                        CompanyName:
+                        <asp:Label ID="CompanyNameLabel" runat="server" Text='<%# Bind("CompanyName") %>' />
                         <br />
-                        PositionTitleID:
-                        <asp:Label ID="PositionTitleIDLabel" runat="server" Text='<%# Bind("PositionTitleID") %>' />
+                        CompanyCity:
+                        <asp:Label ID="CompanyCityLabel" runat="server" Text='<%# Bind("CompanyCity") %>' />
                         <br />
-                        SemesterID:
-                        <asp:Label ID="SemesterIDLabel" runat="server" Text='<%# Bind("SemesterID") %>' />
+                        CompanyState:
+                        <asp:Label ID="CompanyStateLabel" runat="server" Text='<%# Bind("CompanyState") %>' />
                         <br />
-                        MajorID:
-                        <asp:Label ID="MajorIDLabel" runat="server" Text='<%# Bind("MajorID") %>' />
+                        PositionTitle:
+                        <asp:Label ID="PositionTitleLabel" runat="server" Text='<%# Bind("PositionTitle") %>' />
                         <br />
-                        Internship/FullTime:
-                        <asp:Label ID="Internship_FullTimeLabel" runat="server" Text='<%# Bind("[Internship/FullTime]") %>' />
-                        <br />
-                        Paid[Y/N]:
-                        <asp:Label ID="Paid_Y_N_Label" runat="server" Text='<%# Bind("[Paid[Y/N]]") %>' />
-                        <br />
-                        StartDate:
-                        <asp:Label ID="StartDateLabel" runat="server" Text='<%# Bind("StartDate") %>' />
-                        <br />
-                        EndDate:
-                        <asp:Label ID="EndDateLabel" runat="server" Text='<%# Bind("EndDate") %>' />
+                        PositionDesc:
+                        <asp:Label ID="PositionDescLabel" runat="server" Text='<%# Bind("PositionDesc") %>' />
                         <br />
                        
                     </ItemTemplate>
