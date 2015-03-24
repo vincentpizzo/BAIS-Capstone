@@ -24,32 +24,58 @@
                         
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        HawkID:
-                        <asp:TextBox ID="HawkIDTextBox" runat="server" Text='<%# Bind("HawkID") %>' />
+                        <table>
+                            <tr>
+                                <td style="text-align: right;">HawkID:</td>
+                                <td style="text-align: left;">       
+                        <asp:TextBox ID="HawkIDTextBox" runat="server" Text='<%# Bind("HawkID") %>' /></td>
+                            </tr>
                         <br />
-                        SemesterName:
-                        <asp:TextBox ID="SemesterNameTextBox" runat="server" Text='<%# Bind("SemesterName") %>' />
+                            <tr>
+                                <td style="text-align: right;">SemesterName:</td>
+                                <td style="text-align: left;">
+                        <asp:TextBox ID="SemesterNameTextBox" runat="server" Text='<%# Bind("SemesterName") %>' /></td>
+                           </tr>
                         <br />
-                        MajorName:
-                        <asp:TextBox ID="MajorNameTextBox" runat="server" Text='<%# Bind("MajorName") %>' />
+                            <tr>
+                                <td style="text-align: right;">MajorName:</td>
+                                <td style="text-align: left;">
+                        <asp:TextBox ID="MajorNameTextBox" runat="server" Text='<%# Bind("MajorName") %>' /></td>
+                            </tr>
                         <br />
-                        CompanyName:
-                        <asp:TextBox ID="CompanyNameTextBox" runat="server" Text='<%# Bind("CompanyName") %>' />
+                            <tr>
+                                <td style="text-align: right;">CompanyName:</td>
+                                <td style="text-align: left;">
+                        <asp:TextBox ID="CompanyNameTextBox" runat="server" Text='<%# Bind("CompanyName") %>' /></td>
+                            </tr>
                         <br />
-                        CompanyCity:
-                        <asp:TextBox ID="CompanyCityTextBox" runat="server" Text='<%# Bind("CompanyCity") %>' />
+                            <tr>
+                                <td style="text-align: right;">CompanyCity:</td>
+                                <td style="text-align: left;">
+                        <asp:TextBox ID="CompanyCityTextBox" runat="server" Text='<%# Bind("CompanyCity") %>' /></td>
+                            </tr>
                         <br />
-                        CompanyState:
-                        <asp:TextBox ID="CompanyStateTextBox" runat="server" Text='<%# Bind("CompanyState") %>' />
+                            <tr>
+                                <td style="text-align: right;">CompanyState:</td>
+                                <td style="text-align: left;">
+                        <asp:TextBox ID="CompanyStateTextBox" runat="server" Text='<%# Bind("CompanyState") %>' /></td>
+                            </tr>
                         <br />
-                        PositionTitle:
-                        <asp:TextBox ID="PositionTitleTextBox" runat="server" Text='<%# Bind("PositionTitle") %>' />
+                            <tr>
+                                <td style="text-align: right;">PositionTitle:</td>
+                                <td style="text-align: left;">
+                        <asp:TextBox ID="PositionTitleTextBox" runat="server" Text='<%# Bind("PositionTitle") %>' /></td>
+                            </tr>
                         <br />
-                        PositionDesc:
-                        <asp:TextBox ID="PositionDescTextBox" runat="server" Text='<%# Bind("PositionDesc") %>' />
+                            <tr>
+                                <td style="text-align: right;">PositionDesc:</td>
+                                <td style="text-align: left;">
+                        <asp:TextBox ID="PositionDescTextBox" runat="server" Text='<%# Bind("PositionDesc") %>' /></td>
+                            </tr>
                         <br />
                         <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
                         &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                        </table>
 
                     </InsertItemTemplate>
                     <ItemTemplate>
