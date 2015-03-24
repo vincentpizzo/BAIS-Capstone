@@ -12,14 +12,17 @@
 <body>
     <form id="form2" runat="server">
     <h1>BAIS Placement</h1>
-    <ul>
-        <li><a href="Default.aspx">Home</a></li>
-        <li><a href="AddJob.aspx">Add Job</a></li>
-        <li><a href="About.aspx">About Us</a></li>
-        <li><a href="Admin/default.aspx">Admin</a></li>
-        <li><asp:LoginStatus ID="LoginStatus1" runat="server" /></li>
-    </ul>
     
+        <asp:Menu ID="NavMenu" runat="server">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/AddJob.aspx" Text="Add Job" Value="AddJob"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/About.aspx" Text="About Us" Value="AboutUs"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Admin/default.aspx" Text="Admin" Value="Admin"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
