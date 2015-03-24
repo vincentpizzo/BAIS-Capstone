@@ -73,9 +73,10 @@
                         <asp:TextBox ID="PositionDescTextBox" runat="server" Text='<%# Bind("PositionDesc") %>' /></td>
                             </tr>
                         <br />
+                        </table>
                         <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
                         &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                        </table>
+                       
 
                     </InsertItemTemplate>
                     <ItemTemplate>

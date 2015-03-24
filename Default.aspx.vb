@@ -12,7 +12,7 @@ Partial Class _Default
         searchMajor = "Select * From dbo.PlacementDB2 where (Major Like '%" + tb_search.Text.ToString() + "%')"
         searchPosition = "Select * From dbo.PlacementDB2 where (Position Like '%" + tb_search.Text.ToString() + "%')"
         searchSemester = "Select * From dbo.PlacementDB2 where (Semester Like '%" + tb_search.Text.ToString() + "%')"
-        searchState = "Select * From dbo.PlacementDB2 where (State Like '%" + tb_search.Text.ToString() + "%')"
+        searchState = "Select * From dbo.State where (StateName Like '%" + tb_search.Text.ToString() + "%')"
 
         sql_Company.SelectCommand = searchCompany
         sql_Major.SelectCommand = searchMajor
