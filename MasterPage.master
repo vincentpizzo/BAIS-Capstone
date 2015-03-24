@@ -10,21 +10,22 @@
     <link rel="stylesheet" type="text/css" href="./css/Style.css" />
 </head>
 <body>
+    <form id="form2" runat="server">
     <h1>BAIS Placement</h1>
     <ul>
         <li><a href="Default.aspx">Home</a></li>
         <li><a href="AddJob.aspx">Add Job</a></li>
         <li><a href="About.aspx">About Us</a></li>
-        <li><a href="~/Admin/default.aspx">Admin</a></li>
-        <li><a href="Login.aspx">Login</a></li>
+        <li><a href="Admin/default.aspx">Admin</a></li>
+        <li><asp:LoginStatus ID="LoginStatus1" runat="server" /></li>
     </ul>
-    <form id="form1" runat="server">
+    
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
-    </form>
+    
 
     <div id="footer">
         <h4>Copyright 2015</h4>
@@ -34,5 +35,6 @@
             <li><a href="http://www.linkedin.com">LinkedIn</a></li>
         </ul>
     </div>
+    </form>
 </body>
 </html>
