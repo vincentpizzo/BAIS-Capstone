@@ -16,6 +16,8 @@
     <br />
 
 <br />
+    <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="sql_State">
+    </asp:GridView>
 <br />
 
 </asp:Content>
