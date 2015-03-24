@@ -16,8 +16,7 @@
 
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbo.StudentPlacement %>" SelectCommand="SELECT * FROM [Position_Posting]">
                 </asp:SqlDataSource>
-                <br />
-                <br />
+
                 <asp:FormView ID="FormView2" runat="server" DataSourceID="SqlDataSource1" DefaultMode="Insert" BackColor="White" BorderColor="#0066FF">
                     <EditItemTemplate>
 
@@ -30,49 +29,49 @@
                                 <td style="text-align: left;">       
                         <asp:TextBox ID="HawkIDTextBox" runat="server" Text='<%# Bind("HawkID") %>' /></td>
                             </tr>
-                        <br />
+                      
                             <tr>
                                 <td style="text-align: right;">SemesterName:</td>
                                 <td style="text-align: left;">
                         <asp:TextBox ID="SemesterNameTextBox" runat="server" Text='<%# Bind("SemesterName") %>' /></td>
                            </tr>
-                        <br />
+                 
                             <tr>
                                 <td style="text-align: right;">MajorName:</td>
                                 <td style="text-align: left;">
                         <asp:TextBox ID="MajorNameTextBox" runat="server" Text='<%# Bind("MajorName") %>' /></td>
                             </tr>
-                        <br />
+                     
                             <tr>
                                 <td style="text-align: right;">CompanyName:</td>
                                 <td style="text-align: left;">
                         <asp:TextBox ID="CompanyNameTextBox" runat="server" Text='<%# Bind("CompanyName") %>' /></td>
                             </tr>
-                        <br />
+                       
                             <tr>
                                 <td style="text-align: right;">CompanyCity:</td>
                                 <td style="text-align: left;">
                         <asp:TextBox ID="CompanyCityTextBox" runat="server" Text='<%# Bind("CompanyCity") %>' /></td>
                             </tr>
-                        <br />
+                     
                             <tr>
                                 <td style="text-align: right;">CompanyState:</td>
                                 <td style="text-align: left;">
                         <asp:TextBox ID="CompanyStateTextBox" runat="server" Text='<%# Bind("CompanyState") %>' /></td>
                             </tr>
-                        <br />
+                      
                             <tr>
                                 <td style="text-align: right;">PositionTitle:</td>
                                 <td style="text-align: left;">
                         <asp:TextBox ID="PositionTitleTextBox" runat="server" Text='<%# Bind("PositionTitle") %>' /></td>
                             </tr>
-                        <br />
+                       
                             <tr>
                                 <td style="text-align: right;">PositionDesc:</td>
                                 <td style="text-align: left;">
                         <asp:TextBox ID="PositionDescTextBox" runat="server" Text='<%# Bind("PositionDesc") %>' /></td>
                             </tr>
-                        <br />
+                       
                         </table>
                         <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
                         &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
