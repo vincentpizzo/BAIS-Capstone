@@ -9,22 +9,22 @@
 <asp:SqlDataSource ID="sql_Semester" runat="server" ConnectionString="<%$ ConnectionStrings:dbo.StudentPlacement %>" SelectCommand="SELECT * FROM [Semester]"></asp:SqlDataSource>
 <asp:SqlDataSource ID="sql_State" runat="server" ConnectionString="<%$ ConnectionStrings:dbo.StudentPlacement %>" SelectCommand="SELECT * FROM [State]"></asp:SqlDataSource>
 &nbsp;<br />
-    <asp:Label ID="lbl_searchCompany" runat="server" Text="Search By Company"></asp:Label>
+            <%If Not IsPostBack Then%>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_vpizzo_HW7 %>" SelectCommand="SELECT * FROM [vpizzo_HW7]"></asp:SqlDataSource>
+    &nbsp;<br />
+        <asp:Label ID="Label2" runat="server" Text="Search by Brand:"></asp:Label>
+        <br />     
+        <asp:TextBox ID="tb_Brand" AutoPostBack="true" runat="server"></asp:TextBox>
+        <br />
+        <%Else%>
+        <asp:Label ID="Label1" runat="server" Text="Search by Model:"></asp:Label>
+        <br />
+        <asp:TextBox ID="tb_Model" AutoPostBack="true" runat="server"></asp:TextBox>
+        <%End If%>    
+    <br />
+    <asp:Label ID="lbl_searchCompany" runat="server" Text="Search"></asp:Label>
     <asp:TextBox ID="tb_Company" runat="server"></asp:TextBox>
     <asp:Button ID="btn_company" runat="server" Text="Submit" />
-
-    <br />
-    Search By Major<asp:TextBox ID="tb_Major" runat="server"></asp:TextBox>
-    <asp:Button ID="btn_major" runat="server" Text="Submit" />
-    <br />
-    Search By Position<asp:TextBox ID="tb_Position" runat="server"></asp:TextBox>
-    <asp:Button ID="btn_position" runat="server" Text="Submit" />
-    <br />
-    Search By Semester<asp:TextBox ID="tb_Semester" runat="server"></asp:TextBox>
-    <asp:Button ID="btn_semester" runat="server" Text="Submit" />
-    <br />
-    Search By State<asp:TextBox ID="tb_State" runat="server"></asp:TextBox>
-    <asp:Button ID="btn_state" runat="server" Text="Submit" />
 
     <br />
 
