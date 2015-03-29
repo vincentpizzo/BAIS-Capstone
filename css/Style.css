@@ -1,24 +1,102 @@
 ﻿body {
-    background-color: black;
-    color: yellow;
+    background-color:black;
 }
 
-.footer {
-   
+#container {
+    margin:0 auto;
+    width:100%;
+    background-color:black;
+    font-family:'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
-h1 {
-    text-align: left;
-    font-weight: bold;
-    font-size: 36pt;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+#left_logo {
+    Height:150px;
+    text-align:left;
+    margin-left:20px;
 }
 
-h2 {
-    text-align: left;
-    font-weight: bold;
-    font-size: 24pt;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+#header_text{
+    background-color:#FFCC33;
+    text-align:center;
+    font-weight:bold;
+    font-size:30pt;
+    padding:5px;
+}
+
+#menu {
+    margin:0 auto;
+    background-color:lightblue;
+    height:20px;
+    width:50%;
+    float:left;
+}
+
+#menu_container {
+    display:block;
+    width:100%;
+    float:left;
+    margin:0 auto;
+    background-color:#f2f2f2;
+    clear:both;
+    border-bottom:1px solid black;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+#menu {
+    display:block;
+    float:left;
+}
+
+#NavMenu {
+    width:auto;
+    float:left;
+    margin:0;
+    padding:0;
+    list-style:none;
+    background-color:#f2f2f2;
+}
+
+#NavMenu li a {
+    display:block;
+    padding:8px 15px !important;
+    text-decoration:none;
+    font-weight:bold;
+    color:black;
+    background-color:white;
+    border-right:1px solid #ccc;
+}
+
+#NavMenu li a:hover {
+    color:#FFCC33;
+    background-color:black;
+}
+
+.level1 li a {
+    padding:200px;
+}
+
+.level2 li a{
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+
+#search {
+    margin: 0 auto;
+    background-color: purple;
+    width: 35%;
+    float:left;
+    text-align: center;
+}
+
+#login_status {
+    margin: 0 auto;
+    background-color: lime;
+    width: 15%;
+    float: left;
+    text-align: right;
 }
 
 ul {
@@ -27,4 +105,13 @@ ul {
 
 h4 {
     text-align: center;
+}
+
+#footer {
+    margin: 0 auto;
+    background-color: green;
+    height: 100px;
+    border-top: 1px solid black;
+    padding: 20px;
+    text-align: center;  
 }

@@ -3,42 +3,81 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
-    <title></title>
+    <title>BAIS Student Placement</title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="./css/Style.css" />
 </head>
+
 <body>
-    <form id="form2" runat="server">
-    <h1>The University of Iowa</h1>
-        <h2>BAIS Student Placement</h2>
-    
-        <asp:Menu ID="NavMenu" runat="server">
-            <Items>
-                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
-                <asp:MenuItem NavigateUrl="~/AddJob.aspx" Text="Add Job" Value="AddJob"></asp:MenuItem>
-                <asp:MenuItem NavigateUrl="~/About.aspx" Text="About Us" Value="AboutUs"></asp:MenuItem>
-                <asp:MenuItem NavigateUrl="~/Admin/default.aspx" Text="Admin" Value="Admin"></asp:MenuItem>
-            </Items>
-        </asp:Menu>
-        <asp:LoginStatus ID="LoginStatus1" runat="server" />
-
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    <form id="form1" runat="server">
         
-        </asp:ContentPlaceHolder>
-    </div>
-    
+        <div id="container">
+            
+            <div id="header_container">
+                
+                <div id="left_logo">
+                    <asp:Image ID="LeftLogo_UI" runat="server" ImageUrl="~/css/Images/ui-logo.png" AlternateText="University of Iowa" Height="50" />
+                    <br />
+                    <br />
+                    <asp:Image ID="COB_LeftLogo" runat="server" ImageUrl="~/css/Images/cob-logo.png" AlternateText="College of Business" Height="50" />
+                </div> <!-- close left_logo DIV -->
 
-    <div id="footer">
-        <h4>Copyright 2015</h4>
-        <ul>
-            <li><a href="http://www.facebook.com">Facebook</a></li>
-            <li><a href="http://www.twitter.com">Twitter</a></li>
-            <li><a href="http://www.linkedin.com">LinkedIn</a></li>
-        </ul>
-    </div>
+                <div id="header_text">                   
+                    BAIS Student Placement
+                </div> <!-- close header_text DIV -->
+
+            </div> <!-- close header_container DIV -->
+
+            <div id="menu_container">
+                
+                <div id="menu">
+
+                    <asp:Menu ID="NavMenu" runat="server" Orientation="Horizontal" StaticSubMenuIndent="16px" CssClass="static">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AddJob.aspx" Text="Add Job" Value="Add Job"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AddInternship.aspx" Text="Add Internship" Value="Add Internship"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="About Us" Value="About Us"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/default.aspx" Text="Admin" Value="Admin"></asp:MenuItem>
+                        </Items>
+                     </asp:Menu>
+                </div> <!-- close menu DIV -->
+
+                <div id="search">
+                    SEARCH
+                </div>  <!-- close search DIV -->
+
+                <div id="login_status">
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                </div> <!-- close login_status DIV -->
+            
+            </div> <!-- close menu_container DIV -->
+
+            <div id="main">
+
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    MAIN        
+                </asp:ContentPlaceHolder>
+
+            </div> <!-- close main DIV -->
+            
+            <div id="footer">
+                
+                Copyright 2015
+            
+                <ul>
+                    <li><a href="http://www.facebook.com">Facebook</a></li>
+                    <li><a href="http://www.twitter.com">Twitter</a></li>
+                    <li><a href="http://www.linkedin.com">LinkedIn</a></li>
+                </ul>
+
+             </div> <!-- close footer DIV -->
+
+        </div> <!-- close container DIV -->
+    
     </form>
-</body>
+    </body>
 </html>
