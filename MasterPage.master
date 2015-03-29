@@ -11,7 +11,8 @@
 </head>
 <body>
     <form id="form2" runat="server">
-    <h1>BAIS Placement</h1>
+    <h1>The University of Iowa</h1>
+        <h2>BAIS Student Placement</h2>
     
         <asp:Menu ID="NavMenu" runat="server">
             <Items>
