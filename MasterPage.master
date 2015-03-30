@@ -47,7 +47,7 @@
                 </div> <!-- close menu DIV -->
 
                 <div id="search">
-                    SEARCH?
+                    SEARCH BAR?
                 </div>  <!-- close search DIV -->
 
                 <div id="login_status">
@@ -64,17 +64,21 @@
 
             </div> <!-- close main DIV -->
             
+            <div id="socialMedia_links">
+                
+                <asp:HyperLink ID="lnk_Facebook" runat="server" CssClass="facebook" NavigateUrl="http://www.facebook.com/TippieCollege">Facebook</asp:HyperLink>
+                <asp:HyperLink ID="lnk_Twitter" runat="server" NavigateUrl="http://www.twitter.com/TippieIowa" CssClass="twitter">Twitter</asp:HyperLink>
+                <asp:HyperLink ID="lnk_Flicker" runat="server" NavigateUrl="https://www.flickr.com/photos/tippieiowa/" CssClass="flickr">Flickr</asp:HyperLink>
+                <asp:HyperLink ID="lnk_LinkedIn" runat="server" NavigateUrl="https://www.linkedin.com/edu/university-of-iowa---henry-b.-tippie-college-of-business-18229" CssClass="linkedin">LinkedIn</asp:HyperLink>
+                <asp:HyperLink ID="lnk_Instagram" runat="server" NavigateUrl="http://instagram.com/tippiecollege/" CssClass="instagram">Instagram</asp:HyperLink>
+
+            </div>
+            
             <div id="footer">
                             
-                <ul>
-                    <li><a href="http://www.facebook.com">Facebook</a></li>
-                    <li><a href="http://www.twitter.com">Twitter</a></li>
-                    <li><a href="http://www.linkedin.com">LinkedIn</a></li>
-                </ul>
+                © COPYRIGHT 2015 HENRY B. TIPPIE COLLEGE OF BUSINESS
 
-                <h6>Copyright 2015</h6>
-
-             </div> <!-- close footer DIV -->
+            </div> <!-- close footer DIV -->
 
         </div> <!-- close container DIV -->
     

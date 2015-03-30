@@ -115,16 +115,48 @@
     background-color:black;
 }
 
+#main {
+    background-color:#585858;
+    color:white;
+    padding:20px;
+    margin-top:50px;
+    margin-bottom:15px;
+}
+
 h4 {
     text-align: center;
 }
 
+#socialMedia_links {
+    background-color:white;
+    text-align:center;
+}
+
+.facebook, .linkedin, .twitter, .instagram, .flickr {
+    color:#FFCC33;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 3px;
+    font-size: 1em;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    background-color:black;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-decoration:none;
+    width:75px;
+    text-align:center;
+}
+
 #footer {
-    font-family:'TradeGothic-Condensed';
     margin:0 auto;
-    background-color:green;
-    height:100px;
+    color:white;
     border-top:1px solid black;
-    padding:20px;
     text-align:center;  
+    font-size:12px;
+    margin-top:20px;
 }
