@@ -35,7 +35,7 @@
                 
                 <div id="menu">
 
-                    <asp:Menu ID="NavMenu" runat="server" Orientation="Horizontal" StaticSubMenuIndent="16px" CssClass="static">
+                    <asp:Menu ID="NavMenu" runat="server" Orientation="Horizontal" StaticSubMenuIndent="16px" >
                         <Items>
                             <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/AddJob.aspx" Text="Add Job" Value="Add Job"></asp:MenuItem>
@@ -47,11 +47,11 @@
                 </div> <!-- close menu DIV -->
 
                 <div id="search">
-                    SEARCH
+                    SEARCH?
                 </div>  <!-- close search DIV -->
 
                 <div id="login_status">
-                    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                    <asp:LoginStatus ID="LoginStatus" runat="server" cssClass="LoginStatus" />
                 </div> <!-- close login_status DIV -->
             
             </div> <!-- close menu_container DIV -->
@@ -65,14 +65,14 @@
             </div> <!-- close main DIV -->
             
             <div id="footer">
-                
-                Copyright 2015
-            
+                            
                 <ul>
                     <li><a href="http://www.facebook.com">Facebook</a></li>
                     <li><a href="http://www.twitter.com">Twitter</a></li>
                     <li><a href="http://www.linkedin.com">LinkedIn</a></li>
                 </ul>
+
+                <h6>Copyright 2015</h6>
 
              </div> <!-- close footer DIV -->
 
