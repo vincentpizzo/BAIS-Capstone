@@ -82,16 +82,6 @@
     border-bottom:1px solid #ccc;
 }
 
-#search {
-    margin: 0 auto;
-    padding:8px 15px !important;
-    display:block;
-    width: 45%;
-    float:left;
-    text-align:left;
-    font-weight:bold;
-}
-
 #login_status {
     width:auto;
     float:right;

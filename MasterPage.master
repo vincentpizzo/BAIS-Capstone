@@ -46,10 +46,6 @@
                      </asp:Menu>
                 </div> <!-- close menu DIV -->
 
-                <div id="search">
-                    SEARCH BAR?
-                </div>  <!-- close search DIV -->
-
                 <div id="login_status">
                     <asp:LoginStatus ID="LoginStatus" runat="server" cssClass="LoginStatus" />
                 </div> <!-- close login_status DIV -->
