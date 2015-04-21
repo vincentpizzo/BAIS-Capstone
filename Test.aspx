@@ -48,7 +48,8 @@
                 <asp:TextBox ID="SemesterTextBox" runat="server" Text='<%# Bind("Semester") %>' />
                 <br />
                 Position Type:
-                <asp:DropDownList ID="ddl_PositionType" runat="server" DataValueField='PositionType' DataSourceID="sql_PositionType" DataTextField='PositionType' SelectedValue="<%# Eval("PositionType")%>">
+                <asp:DropDownList ID="ddl_PositionType" runat="server" DataValueField='PositionType' DataSourceID="sql_PositionType" DataTextField='PositionType'
+                     SelectedValue='<%# Bind("[Position Type]")%>'>
                 </asp:DropDownList>
                 <br />
                 Position Title:
