@@ -36,6 +36,7 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <asp:SqlDataSource ID="sql_PositionType" runat="server" ConnectionString="<%$ ConnectionStrings:dbo.StudentPlacement %>" SelectCommand="SELECT [PositionType] FROM [PositionType]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="sql_State" runat="server" ConnectionString="<%$ ConnectionStrings:dbo.StudentPlacement %>" SelectCommand="SELECT [StateAbbreviation] FROM [State]"></asp:SqlDataSource>
         <asp:FormView ID="FormView1" runat="server" DataKeyNames="JobID" DataSourceID="sql_AddJob">
             <EditItemTemplate>
                 JobID:
@@ -68,7 +69,9 @@
                 <asp:TextBox ID="Company_AddressTextBox" runat="server" Text='<%# Bind("[Company Address]") %>' />
                 <br />
                 Company State:
-                <asp:TextBox ID="Company_StateTextBox" runat="server" Text='<%# Bind("[Company State]") %>' />
+                <asp:DropDownList ID="ddl_State" runat="server" DataValueField='StateAbbreviation' DataSourceID="sql_State" DataTextField='State Abbreviation'
+                     SelectedValue='<%# Bind("[State Abbreviation]")%>'>
+                </asp:DropDownList>
                 <br />
                 Company Zip:
                 <asp:TextBox ID="Company_ZipTextBox" runat="server" Text='<%# Bind("[Company Zip]") %>' />
