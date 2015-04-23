@@ -34,7 +34,43 @@
    
    <script type="text/javascript">
        init_map('my_map', 41.6611277, -91.5301683, 14);
-   </script>
+
+       
+
+
+
+        var marker = new google.maps.Marker({ title: "Marker Title", position: new google.maps.LatLng(lat, lng) });
+        marker.setMap(mapObject);
+
+        var markers =
+   [
+      {
+          title: "Calvin Hall",
+          position: new google.maps.LatLng(41.6624914, -91.5361998)
+      },
+      {
+          title: "Papa John Business Building",
+          position: new google.maps.LatLng(41.6644153, -91.5340121)
+      },
+      {
+          title: "Pomerantz Center",
+          position: new google.maps.LatLng(41.6652720, -91.5343578)
+      },
+      {
+          title: "Kinnick Stadium",
+          position: new google.maps.LatLng(41.6604534, -91.5522263)
+      }
+   ];
+
+        var map = new google.maps.Map(map_canvas, options);
+
+        // Place markers
+        for (var i = 0; i < markers.length; i++) {
+            var marker = new google.maps.Marker(markers[i]);
+            marker.setMap(map);
+        }
+
+    </script>
 
 </asp:Content>
 

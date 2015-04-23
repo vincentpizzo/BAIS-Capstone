@@ -42,6 +42,7 @@
                             <asp:MenuItem NavigateUrl="~/JobPostings.aspx" Text="Job Postings" Value="Add Internship"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/About.aspx" Text="About Us" Value="About Us"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/Admin/default.aspx" Text="Admin" Value="Admin"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ShowJobs" Text="Jobs Map" Value="Map"></asp:MenuItem>
                         </Items>
                      </asp:Menu>
                 </div> <!-- close menu DIV -->
