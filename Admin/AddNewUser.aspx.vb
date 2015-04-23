@@ -19,7 +19,19 @@ Partial Class Admin_AddNewUser
             Roles.AddUserToRole(NewUser.UserName, "Customer")
 
             Dim ConnectionString As String = ConfigurationManager.ConnectionStrings("dbo.StudentPlacementDB2").ConnectionString
-            Dim UpdateSQL As String = "INSERT INTO [UserProfile] ([UserID], [FirstName], [LastName], [City], [State]")
+            Dim UpdateSQL As String = "INSERT INTO [UserProfile] ([UserID], [FirstName], [LastName], [City], [State]) VALUES (@UserID, @FirstName, @LastName, @City, @State)"
+
+            Using MyConnection As New SqlConnection(ConnectionString)
+                MyConnection.Open()
+                Dim MyCommand As New SqlCommand(UpdateSQL, MyConnection)
+                MyCommand.Parameters.Add(New SqlParameter("@PostalCode", strStateAbbreviation))
+                MyCommand.Parameters.AddWithValue("@FirstName", FirstName.Text.Trim())
+                MyCommand.Parameters.AddWithValue("@LastName", LastName.Text.Trim())
+                MyCommand.Parameters.AddWithValue("@City", city.Text.Trim())
+                MyCommand.Parameters.AddWithValue("@UserID", NewUserID)
+                MyCommand.ExecuteNonQuery()
+                MyConnection.Close()
+            End Using
 
         End If
     End Sub
