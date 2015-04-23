@@ -6,6 +6,16 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <style type="text/css">
+        .auto-style1 {
+            text-align: right;
+            height: 26px;
+        }
+        .auto-style2 {
+            text-align: left;
+            height: 26px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -31,8 +41,8 @@
         <table>
             
             <tr>
-	            <td class="detailheader">* User Name:</td>
-	            <td class="detailuser">
+	            <td class="auto-style1">* User Name:</td>
+	            <td class="auto-style2">
 		            <asp:TextBox ID="tb_username" runat="server"></asp:TextBox>
 	            </td>
             </tr>
