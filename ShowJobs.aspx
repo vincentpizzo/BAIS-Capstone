@@ -10,7 +10,7 @@
          var options = {
             zoom: zoomLevel,
             center: myLatLng,
-            mapTypeId: google.maps.MapTypeId.HYBRID
+            mapTypeId: google.maps.MapTypeId.ROADMAP
          };
 
          var map_canvas = document.getElementById(map_canvas_id);
