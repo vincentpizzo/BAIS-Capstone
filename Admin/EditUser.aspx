@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="edit_user.aspx.vb" Inherits="edit_user" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="EditUser.aspx.vb" Inherits="edit_user" %>
 
 <!DOCTYPE html>
 
