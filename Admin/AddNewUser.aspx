@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <br />
-    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" ActiveStepIndex="2">
+    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" LoginCreatedUser="false">
         <WizardSteps>
             <asp:CreateUserWizardStep runat="server" />
             <asp:WizardStep ID="UserProfile" runat="server" StepType="Step" Title="User Profile Settings:">
